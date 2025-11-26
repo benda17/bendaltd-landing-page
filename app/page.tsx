@@ -147,14 +147,14 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent section-transition">
           
-          <div className="container mx-auto px-4 py-20 relative z-10">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               {/* Left: Hero Content */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="space-y-8 relative z-30"
+                className="space-y-6 md:space-y-8 relative z-30 text-center md:text-right"
               >
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -170,7 +170,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
-                  className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight"
                 >
                   <span className="block mb-2 text-[#F2F3F6]">בנה חנות איביי</span>
                   <span className="text-[#3b82f6] block">שמכניסה כסף אמיתי</span>
@@ -190,11 +190,11 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.7 }}
-                  className="flex flex-col sm:flex-row gap-4 pt-4"
+                  className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start"
                 >
                   <Button
                     onClick={scrollToForm}
-                    className="bg-[#4f8bff] hover:bg-[#3b82f6] text-white font-semibold text-lg px-10 py-6 rounded-md transition-all duration-200"
+                    className="bg-[#4f8bff] hover:bg-[#3b82f6] text-white font-semibold text-lg px-8 py-6 md:px-10 rounded-md transition-all duration-200 w-full sm:w-auto"
                     size="lg"
                   >
                     אני רוצה לשמוע על הקורס
@@ -205,7 +205,7 @@ export default function Home() {
                       content?.scrollIntoView({ behavior: "smooth" })
                     }}
                     variant="outline"
-                    className="border border-[#4f8bff] text-[#4f8bff] hover:bg-[#4f8bff]/12 hover:border-[#4f8bff] text-lg px-10 py-6 rounded-md transition-all duration-200"
+                    className="border border-[#4f8bff] text-[#4f8bff] hover:bg-[#4f8bff]/12 hover:border-[#4f8bff] text-lg px-8 py-6 md:px-10 rounded-md transition-all duration-200 w-full sm:w-auto"
                     size="lg"
                   >
                     לפרטים על מה לומדים בקורס
@@ -216,7 +216,7 @@ export default function Home() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.9 }}
-                  className="flex items-center gap-3 pt-4"
+                  className="flex items-center justify-center md:justify-start gap-3 pt-4"
                 >
                   <div className="flex gap-1">
                     {[1, 2, 3, 4, 5].map((i) => (
@@ -241,7 +241,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: 30, scale: 0.95 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="hidden md:block relative z-20"
+                className="block relative z-20 w-full"
               >
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
@@ -269,12 +269,12 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Lead Form Section (Mobile) */}
-        <section id="lead-form" className="py-20 bg-transparent md:hidden relative z-10 section-transition">
+        {/* Lead Form Section (Mobile) - REMOVED since it's now in Hero */}
+        {/* <section id="lead-form" className="py-20 bg-transparent md:hidden relative z-10 section-transition">
           <div className="container mx-auto px-4 relative z-10">
             <LeadForm />
           </div>
-        </section>
+        </section> */}
 
         {/* Why This Course is Different */}
         <section className="py-24 bg-transparent relative overflow-hidden z-10 section-transition">
